@@ -26,7 +26,7 @@ const prefix = "1";
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith('1')) return undefined;
+    if (!msg.content.startsWith(perfix)) return undefined;
     
     let args = msg.content.split(' ');
 
@@ -88,7 +88,7 @@ client.on('message', async msg =>{
 //////////////////////
 client.on('message', async msg => { 
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith('1')) return undefined;
+    if (!msg.content.startsWith(perfix)) return undefined;
     
     const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
@@ -313,7 +313,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '1help') {
+    if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription('**برفكس البوت (!)**')
