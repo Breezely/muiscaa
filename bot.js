@@ -48,7 +48,7 @@ client.on('message', async msg =>{
 //////////////////////
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith('1')) return undefined;
+    if (!msg.content.startsWith(perfix)) return undefined;
     
     let args = msg.content.split(' ');
 
