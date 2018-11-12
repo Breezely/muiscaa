@@ -26,7 +26,7 @@ const prefix = "1";
 
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
-    if (!msg.content.startsWith(prefix)) return undefined;
+    if (!msg.content.startsWith('1')) return undefined;
     
     let args = msg.content.split(' ');
 
@@ -313,7 +313,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'help') {
+    if (message.content === '1help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription('**برفكس البوت (!)**')
